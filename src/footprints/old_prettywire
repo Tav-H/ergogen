@@ -1,0 +1,58 @@
+
+    (pad diode_top_right smd custom (at 0 5 ${p.rot}) (size 0.25 0.25) (layers F.Cu) ${p.colrow.str}
+     (zone_connect 0)
+      (options (clearance none) (anchor none))
+      (primitives
+        (gr_line (start 1.65 0) (end 3.81 0) (width 0.25))
+      ))
+
+   (pad diode_top_left smd custom (at 0 5 ${p.rot}) (size 0.25 0.25) (layers F.Cu) ${p.row_net.str}
+     (zone_connect 0)
+      (options (clearance outline) (anchor circle))
+      (primitives
+        (gr_line (start -1.65 0) (end -3.81 0) (width 0.25))
+      ))
+    (pad diode_bottom_right smd custom (at 0 5 ${p.rot}) (size 0.25 0.25) (layers B.Cu) ${p.colrow.str}
+     (zone_connect 0)
+      (options (clearance outline) (anchor circle))
+      (primitives
+        (gr_line (start 1.65 0) (end 3.81 0) (width 0.25))
+      ))
+    (pad diode_bottom_left smd custom (at 0 5 ${p.rot}) (size 0.25 0.25) (layers B.Cu) ${p.row_net.str}
+     (zone_connect 0)
+      (options (clearance outline) (anchor circle))
+      (primitives
+        (gr_line (start -1.65 0) (end -3.81 0) (width 0.25))
+      ))
+
+
+          (segment (start 1.65 5) (end 3.81 5) (width 0.25) (layer F.Cu)  ${p.row_net.str})
+
+
+
+
+
+
+
+
+
+
+
+
+
+    (module wiring (layer F.Cu) (tstamp 5BF2CC94)
+    ${p.at /* parametric position */}
+
+
+
+
+    (segment (start -3.048 10.668) (end 1.524 10.668) (width 0.25) (layer "F.Cu") (net 0) (tstamp 8c66d09a-a3d9-41ab-a63e-990b944f7cdb))
+
+
+
+
+
+
+
+
+    )
