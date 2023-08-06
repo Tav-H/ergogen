@@ -14,7 +14,7 @@ module.exports = {
     function rel(loc_x, loc_y) {
         const centerdist = sqrt((pow(loc_x, 2) + pow(loc_y, 2)));
         var angle = atan((loc_y/loc_x)) / (pi/180);
-        angle -= p.r;
+        angle -= p.rot;
         var new_x = (cos(angle * (pi/180)) * centerdist);
         var new_y = (sin(angle * (pi/180)) * centerdist);
         if (loc_x < 0) {
