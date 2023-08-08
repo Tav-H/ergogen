@@ -22,5 +22,6 @@ module.exports = {
     bat: require('./bat'),
     b3u1000p: require('./b3u1000p'),
     battery_reversible: require('./battery_reversible'),
-    prettywire: require('./prettywire')
+    prettywire: require('./prettywire'),
+    wiresave: require('./wiresave')
 }

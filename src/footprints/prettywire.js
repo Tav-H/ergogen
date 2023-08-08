@@ -1,4 +1,4 @@
-const { sqrt, pow, sin, cos, atan, pi } = require('mathjs')
+const { sqrt, pow, sin, cos, atan, pi, round } = require('mathjs')
 module.exports = {
     params: {
         column_net: undefined,
@@ -23,6 +23,8 @@ module.exports = {
         }
         new_x += p.x;
         new_y += p.y;
+        new_x = round(new_x, 3);
+        new_y = round(new_y, 3);
         return [new_x, new_y];
     }
 
@@ -71,6 +73,11 @@ module.exports = {
         wire(5.842, -5.842, 7, -7, p.column_net.str, "B.Cu")
     )
 
+    const alps = "".concat(
+        wire(2.5, -4.5, 2.5, 3.69, p.colrow.str, "F.Cu"),
+        wire(2.5, 3.69, 3.81, 5, p.colrow.str, "F.Cu")
+    )
+
     const via_loc = rel(7, -7);
 
     const column_via = `
@@ -101,6 +108,9 @@ module.exports = {
                     output += choc_hotswap_top;
                 }
             }
+        }
+        else if (p.switchtype == "alps") {
+            output += alps;
         }
     }
 
